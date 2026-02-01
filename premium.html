@@ -2,10 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ToolBoxAI Premium - Sans publicité, outils illimités, support prioritaire. Passez à la version premium pour une expérience optimale.">
     <title>ToolBoxAI Premium - Sans Pub | Abonnement</title>
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="canonical" href="https://toolboxai.com/premium.html">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxai.com/premium.html">
+    <meta property="og:title" content="ToolBoxAI Premium">
+    <meta property="og:description" content="Sans publicité, outils illimités, support prioritaire.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="ToolBoxAI Premium">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -84,7 +94,8 @@
                 <div>
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="index.html">Outils</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="tools/index.html">Tous les outils</a></li>
                         <li><a href="blog/index.html">Blog</a></li>
                         <li><a href="premium.html">Premium</a></li>
                     </ul>
@@ -92,9 +103,10 @@
                 <div>
                     <h4>Légal</h4>
                     <ul>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">CGU</a></li>
-                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="privacy.html">Confidentialité</a></li>
+                        <li><a href="terms.html">CGU</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">À propos</a></li>
                     </ul>
                 </div>
             </div>
@@ -102,10 +114,10 @@
         </div>
     </footer>
 
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/data.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script>
+    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script defer>
         document.getElementById('subscribe-btn').addEventListener('click', function() {
             alert('Fonctionnalité démo. Connecter à Stripe ou système de paiement pour la production.');
         });

@@ -24,7 +24,8 @@
 
     function createToolCard(tool, index) {
         const link = document.createElement('a');
-        link.href = tool.url;
+        var base = (typeof window !== 'undefined' && window.location.pathname.indexOf('tools') !== -1) ? tool.url.replace(/^tools\//, '') : tool.url;
+        link.href = base;
         link.className = 'tool-card';
         link.setAttribute('aria-label', 'Ouvrir ' + tool.name);
 
@@ -67,9 +68,23 @@
         });
     }
 
+    function initBreadcrumbAndCanonical() {
+        var bc = document.getElementById('breadcrumb-current');
+        if (bc) {
+            var h1 = document.querySelector('main h1');
+            if (h1) bc.textContent = h1.textContent;
+        }
+        var cl = document.querySelector('link[rel="canonical"][id="canonical-link"]');
+        if (cl && window.location && window.location.href) cl.href = window.location.origin + window.location.pathname;
+        var slots = document.querySelectorAll('.tool-page .ad-slot');
+        if (slots[0] && !slots[0].classList.contains('ad-top')) slots[0].classList.add('ad-top');
+        if (slots[1] && !slots[1].classList.contains('ad-middle')) slots[1].classList.add('ad-middle');
+    }
+
     function init() {
         renderToolsGrid();
         initMobileNav();
+        initBreadcrumbAndCanonical();
     }
 
     if (document.readyState === 'loading') {

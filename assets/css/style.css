@@ -321,6 +321,26 @@ body {
 .ad-box--leaderboard { min-height: 90px; max-width: 728px; margin-left: auto; margin-right: auto; }
 .ad-box--rectangle { min-height: 250px; max-width: 300px; margin-left: auto; margin-right: auto; }
 
+/* Emplacements AdSense (classe sémantique) */
+.ad-slot { min-height: 90px; }
+.ad-slot.ad-top,
+.ad-slot.ad-middle,
+.ad-slot.ad-bottom { background: var(--color-ad-bg); border: 1px dashed var(--color-border); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; margin: 1.5rem auto; }
+
+/* ============================================
+   Breadcrumb
+   ============================================ */
+
+.breadcrumb {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+.breadcrumb a { color: var(--color-text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--color-primary); }
+.breadcrumb span { margin: 0 0.35rem; color: var(--color-text-light); }
+.breadcrumb .breadcrumb-current { color: var(--color-text); font-weight: 600; }
+
 /* ============================================
    Tools Grid
    ============================================ */
@@ -751,6 +771,14 @@ body {
 .tool-seo-text { margin-top: 2rem; }
 .tool-seo-text h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
 .tool-seo-text p { color: var(--color-text-muted); margin: 0; }
+.tool-how-to, .tool-faq, .tool-related { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border-light); }
+.tool-how-to h2, .tool-faq h2, .tool-related h2 { font-size: 1.125rem; font-weight: 700; margin: 0 0 1rem; }
+.tool-how-to ol, .tool-faq dl { margin: 0; padding-left: 1.25rem; color: var(--color-text-muted); font-size: 0.95rem; }
+.tool-faq dt { font-weight: 600; color: var(--color-text); margin-top: 0.75rem; }
+.tool-faq dd { margin: 0.25rem 0 0; }
+.tool-related ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.tool-related a { display: inline-block; padding: 0.35rem 0.75rem; background: var(--color-bg-alt); border-radius: var(--radius-sm); color: var(--color-primary); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+.tool-related a:hover { background: var(--color-primary-light); }
 
 /* Message à implémenter */
 .impl-message {

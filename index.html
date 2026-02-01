@@ -2,11 +2,14 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ToolBoxAI - Outils web gratuits : convertisseurs, générateur de mots de passe, compression, résumé IA. +50 000 utilisateurs. 100% gratuit, sans inscription.">
     <title>ToolBoxAI - Outils Web Gratuits #1 | Convertisseurs, PDF, IA</title>
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
     <link rel="canonical" href="https://toolboxai.com/">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
@@ -78,7 +81,7 @@
             </div>
         </div>
 
-        <aside class="ad-box ad-box--leaderboard" role="complementary">
+        <aside class="ad-box ad-slot ad-top ad-box--leaderboard" role="complementary">
             <div class="ad-placeholder">Emplacement pub 728x90 (Leaderboard)</div>
         </aside>
 
@@ -89,7 +92,7 @@
             </div>
         </section>
 
-        <aside class="ad-box ad-box--rectangle" role="complementary">
+        <aside class="ad-box ad-slot ad-middle ad-box--rectangle" role="complementary">
             <div class="ad-placeholder">Emplacement pub 300x250 (Rectangle)</div>
         </aside>
 
@@ -101,7 +104,7 @@
             </div>
         </section>
 
-        <aside class="ad-box ad-box--leaderboard" role="complementary">
+        <aside class="ad-box ad-slot ad-bottom ad-box--leaderboard" role="complementary">
             <div class="ad-placeholder">Emplacement pub 728x90 (Footer)</div>
         </aside>
     </main>
@@ -116,7 +119,8 @@
                 <div>
                     <h4>Navigation</h4>
                     <ul>
-                        <li><a href="index.html">Outils</a></li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="tools/index.html">Tous les outils</a></li>
                         <li><a href="blog/index.html">Blog</a></li>
                         <li><a href="premium.html">Premium</a></li>
                     </ul>
@@ -124,9 +128,10 @@
                 <div>
                     <h4>Légal</h4>
                     <ul>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">CGU</a></li>
-                        <li><a href="#">Confidentialité</a></li>
+                        <li><a href="privacy.html">Confidentialité</a></li>
+                        <li><a href="terms.html">CGU</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">À propos</a></li>
                     </ul>
                 </div>
             </div>
@@ -146,8 +151,8 @@
     }
     </script>
  
-    <script src="assets/js/data.js"></script>
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/utils.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

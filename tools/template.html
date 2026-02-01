@@ -2,22 +2,31 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index,follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- MODIFIER : title et meta description pour chaque outil -->
     <meta name="description" content="[Description SEO de l'outil - 150-160 caractères]">
     <title>[Nom de l'outil] | ToolBoxAI</title>
     <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="canonical" id="canonical-link" href="">
+    <link rel="manifest" href="../manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toolboxai.com/tools/[nom-fichier].html">
+    <meta property="og:title" content="[Nom de l'outil] | ToolBoxAI">
+    <meta property="og:description" content="[Description SEO]">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="[Nom de l'outil] | ToolBoxAI">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <!-- Header réutilisable -->
     <header class="header">
         <div class="container">
             <a href="../index.html" class="logo">ToolBox<span class="logo-accent">AI</span></a>
             <nav class="nav">
                 <a href="../index.html">Outils</a>
                 <a href="../blog/index.html">Blog</a>
-                <a href="../premium.html">Premium</a>
+                <a href="../premium.html" class="nav-premium">Premium</a>
             </nav>
             <button class="nav-toggle" aria-label="Menu" type="button"></button>
         </div>
@@ -26,56 +35,74 @@
     <main class="main">
         <section class="tool-page">
             <div class="container">
-                <!-- MODIFIER : h1 et description -->
+                <nav class="breadcrumb" aria-label="Fil d'Ariane"><a href="../index.html">Accueil</a><span>&#8250;</span><a href="index.html">Outils</a><span>&#8250;</span><span class="breadcrumb-current" id="breadcrumb-current"></span></nav>
                 <h1>[Nom de l'outil]</h1>
                 <p class="tool-page__desc">[Courte description de l'outil pour le SEO et l'utilisateur.]</p>
 
-                <!-- Emplacement pub -->
-                <aside class="ad-box ad-box--rectangle" role="complementary">
+                <aside class="ad-box ad-slot ad-top ad-box--rectangle" role="complementary">
                     <div class="ad-placeholder">Emplacement pub 300x250</div>
                 </aside>
 
-                <!-- Zone principale de l'outil -->
-                <div class="tool-card-page">
+                <article class="tool-card-page">
                     <!-- MODIFIER : Contenu spécifique à l'outil -->
                     <p>Contenu de l'outil à implémenter ici.</p>
-                </div>
+                </article>
+
+                <aside class="ad-box ad-slot ad-middle ad-box--rectangle" role="complementary">
+                    <div class="ad-placeholder">Emplacement pub 300x250</div>
+                </aside>
+
+                <section class="tool-seo-text">
+                    <h2>[Titre section description SEO]</h2>
+                    <p>[200-400 mots SEO optimisés avec mots clés.]</p>
+                </section>
+
+                <section class="tool-how-to" aria-labelledby="how-to-title">
+                    <h2 id="how-to-title">Comment utiliser</h2>
+                    <ol>
+                        <li>Saisissez ou collez votre contenu.</li>
+                        <li>Utilisez les options ou boutons.</li>
+                        <li>Copiez le résultat.</li>
+                    </ol>
+                </section>
+                <section class="tool-faq" aria-labelledby="faq-title">
+                    <h2 id="faq-title">FAQ</h2>
+                    <dl>
+                        <dt>Cet outil est-il gratuit ?</dt>
+                        <dd>Oui. Tous nos outils sont gratuits.</dd>
+                        <dt>Mes données sont-elles envoyées à un serveur ?</dt>
+                        <dd>Pour la plupart des outils, le traitement se fait dans votre navigateur.</dd>
+                    </dl>
+                </section>
+                <section class="tool-related" aria-labelledby="related-title">
+                    <h2 id="related-title">Outils associés</h2>
+                    <ul>
+                        <li><a href="word-counter.html">Compteur de mots</a></li>
+                        <li><a href="base64.html">Base64</a></li>
+                        <li><a href="password.html">Générateur de mot de passe</a></li>
+                    </ul>
+                </section>
+
+                <aside class="ad-box ad-slot ad-bottom ad-box--rectangle" role="complementary">
+                    <div class="ad-placeholder">Emplacement pub 300x250</div>
+                </aside>
             </div>
         </section>
     </main>
 
-    <!-- Footer réutilisable -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3>ToolBoxAI</h3>
-                    <p>Votre boîte à outils en ligne. Gratuit, rapide, efficace.</p>
-                </div>
-                <div>
-                    <h4>Liens</h4>
-                    <ul>
-                        <li><a href="../index.html">Outils</a></li>
-                        <li><a href="../blog/index.html">Blog</a></li>
-                        <li><a href="../premium.html">Premium</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Légal</h4>
-                    <ul>
-                        <li><a href="#">Mentions légales</a></li>
-                        <li><a href="#">CGU</a></li>
-                        <li><a href="#">Confidentialité</a></li>
-                    </ul>
-                </div>
+                <div><h3>ToolBox<span class="logo-accent">AI</span></h3><p>La boîte à outils web #1.</p></div>
+                <div><h4>Navigation</h4><ul><li><a href="../index.html">Accueil</a></li><li><a href="index.html">Tous les outils</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../premium.html">Premium</a></li></ul></div>
+                <div><h4>Légal</h4><ul><li><a href="../privacy.html">Confidentialité</a></li><li><a href="../terms.html">CGU</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../about.html">À propos</a></li></ul></div>
             </div>
             <p class="footer-copy">&copy; 2025 ToolBoxAI. Tous droits réservés.</p>
         </div>
     </footer>
 
-    <!-- MODIFIER : Ajouter les scripts spécifiques à l'outil -->
-    <script src="../assets/js/utils.js"></script>
-    <script src="../assets/js/data.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/utils.js" defer></script>
+    <script src="../assets/js/data.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
 </body>
 </html>

@@ -1,8 +1,4 @@
-# robots.txt - ToolBoxAI
-# Basique pour SEO - Autorise tous les crawlers
-
 User-agent: *
 Allow: /
 
-# Sitemap pour aider les moteurs de recherche
-Sitemap: https://votresite.com/sitemap.xml
+Sitemap: https://toolboxai.com/sitemap.xml
