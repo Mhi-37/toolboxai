@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Résumeur de texte IA gratuit. Résumez vos articles, documents et textes longs en quelques secondes. Outil en ligne intelligent.">
+    <title>Résumeur de texte IA | ToolBoxAI</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <!-- Header réutilisable -->
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">ToolBox<span class="logo-accent">AI</span></a>
+            <nav class="nav">
+                <a href="../index.html">Outils</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../premium.html">Premium</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Menu" type="button"></button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="tool-page">
+            <div class="container">
+                <a href="../index.html" class="tool-page__back">&larr; Tous les outils</a>
+                <h1>Résumeur de texte IA</h1>
+                <p class="tool-page__desc">Résumez n'importe quel texte en quelques secondes. Collez votre contenu et obtenez un résumé concis.</p>
+
+                <aside class="ad-box ad-box--rectangle" role="complementary">
+                    <div class="ad-placeholder">Emplacement pub 300x250</div>
+                </aside>
+
+                <div class="tool-card-page">
+                    <form id="summarizer-form">
+                        <div class="form-group">
+                            <label for="summarizer-input">Texte à résumer</label>
+                            <textarea class="textarea-tool" id="summarizer-input" placeholder="Collez votre texte ici..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary" id="summarizer-btn">Résumer le texte</button>
+                    </form>
+                    <div id="summarizer-result" class="result-box" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer réutilisable -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>ToolBox<span class="logo-accent">AI</span></h3>
+                    <p>La boîte à outils web #1. Gratuit, rapide, efficace.</p>
+                </div>
+                <div>
+                    <h4>Liens</h4>
+                    <ul>
+                        <li><a href="../index.html">Outils</a></li>
+                        <li><a href="../blog/index.html">Blog</a></li>
+                        <li><a href="../premium.html">Premium</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGU</a></li>
+                        <li><a href="#">Confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2025 ToolBoxAI. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- TODO: Connecter API IA (OpenAI, Anthropic, etc.) plus tard -->
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        (function() {
+            var form = document.getElementById('summarizer-form');
+            var input = document.getElementById('summarizer-input');
+            var resultEl = document.getElementById('summarizer-result');
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var text = input.value.trim();
+                var btn = document.getElementById('summarizer-btn');
+                if (!text) {
+                    resultEl.textContent = 'Veuillez entrer du texte à résumer.';
+                    resultEl.style.display = 'block';
+                    return;
+                }
+                btn.disabled = true;
+                btn.textContent = 'Résumé en cours...';
+                resultEl.style.display = 'none';
+                // Simulation délai + faux résultat (remplacer par appel API IA)
+                setTimeout(function() {
+                    var fakeSummary = 'Ceci est un résumé factice. Connecter une API IA (OpenAI, Anthropic, etc.) pour un résumé réel.\n\nPoints clés extraits : ' +
+                        text.slice(0, 150).replace(/\s+/g, ' ') + '...';
+                    resultEl.textContent = fakeSummary;
+                    resultEl.style.display = 'block';
+                    btn.disabled = false;
+                    btn.textContent = 'Résumer le texte';
+                    resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 800);
+            });
+        })();
+    </script>
+</body>
+</html>

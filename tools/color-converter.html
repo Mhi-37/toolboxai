@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convertisseur de couleurs gratuit. Convertissez entre HEX, RGB, HSL et affichez un aperçu. Outil pour designers et développeurs.">
+    <title>Convertisseur de couleurs | ToolBoxAI</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="../index.html" class="logo">ToolBox<span class="logo-accent">AI</span></a>
+            <nav class="nav">
+                <a href="../index.html">Outils</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../premium.html">Premium</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Menu" type="button"></button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="tool-page">
+            <div class="container">
+                <a href="../index.html" class="tool-page__back">&larr; Tous les outils</a>
+                <h1>Convertisseur de couleurs</h1>
+                <p class="tool-page__desc">Convertissez entre HEX, RGB et HSL. Aperçu instantané de la couleur.</p>
+
+                <aside class="ad-box ad-box--rectangle" role="complementary">
+                    <div class="ad-placeholder">Emplacement pub 300x250</div>
+                </aside>
+
+                <div class="tool-card-page">
+                    <form id="color-form">
+                        <div class="form-group">
+                            <label for="color-input">Couleur (HEX, RGB ou HSL)</label>
+                            <input type="text" id="color-input" placeholder="#6366f1 ou rgb(99,102,241) ou hsl(239,84%,67%)">
+                        </div>
+                        <div class="form-group">
+                            <label>Ou choisissez</label>
+                            <input type="color" id="color-picker" value="#6366f1" style="width:60px;height:40px;cursor:pointer;">
+                        </div>
+                        <button type="button" class="btn btn--primary" id="color-convert">Convertir</button>
+                    </form>
+                    <div id="color-preview" style="width:100%;height:80px;border-radius:8px;margin:1rem 0;border:1px solid var(--color-border);"></div>
+                    <div id="color-result" class="result-box" style="display:none;">
+                        <div class="form-group"><label>HEX</label><input type="text" id="color-hex" readonly></div>
+                        <div class="form-group"><label>RGB</label><input type="text" id="color-rgb" readonly></div>
+                        <div class="form-group"><label>HSL</label><input type="text" id="color-hsl" readonly></div>
+                        <button type="button" class="btn btn--ghost" id="color-copy-hex">Copier HEX</button>
+                    </div>
+                </div>
+
+                <aside class="ad-box ad-box--rectangle" role="complementary">
+                    <div class="ad-placeholder">Emplacement pub 300x250</div>
+                </aside>
+
+                <div class="tool-seo-text">
+                    <h2>Convertisseur de couleurs HEX, RGB, HSL</h2>
+                    <p>Convertissez vos couleurs entre les formats les plus utilisés en web et design. HEX (#6366f1) pour le CSS, RGB pour Canvas et certaines APIs, HSL pour des variations de teinte et saturation. Notre outil parse automatiquement l'entrée et affiche l'aperçu. Indispensable pour les développeurs front-end et les designers. Copiez le format dont vous avez besoin. Compatible avec les formats courts (#f00) et longs (#ff0000).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div><h3>ToolBox<span class="logo-accent">AI</span></h3><p>La boîte à outils web #1.</p></div>
+                <div><h4>Liens</h4><ul><li><a href="../index.html">Outils</a></li><li><a href="../blog/index.html">Blog</a></li><li><a href="../premium.html">Premium</a></li></ul></div>
+                <div><h4>Légal</h4><ul><li><a href="#">Mentions légales</a></li><li><a href="#">CGU</a></li><li><a href="#">Confidentialité</a></li></ul></div>
+            </div>
+            <p class="footer-copy">&copy; 2025 ToolBoxAI.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/tools/color-converter.js"></script>
+</body>
+</html>
