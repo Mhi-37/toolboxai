@@ -812,3 +812,10 @@ body {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
 }
+
+
+#qr-canvas {
+    image-rendering: pixelated;
+    max-width: 100%;
+    height: auto;
+}
